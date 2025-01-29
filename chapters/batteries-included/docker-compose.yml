@@ -146,7 +146,7 @@ services:
     container_name: grafana
     image: ${GRAFANA_IMAGE:-docker.io/grafana/grafana:10.4.4}
     ports:
-      - 3000:3000
+      - 80:3000
     volumes:
       - ./grafana/datasources.yml:/etc/grafana/provisioning/datasources/all.yml
       - ./grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/all.yml
